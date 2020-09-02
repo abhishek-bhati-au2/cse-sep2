@@ -100,6 +100,15 @@ Full Outer Join
 A full outer join, or full join, which is not supported by the popular MySQL database management system, combines and returns all data from two or more tables, regardless of whether there is shared information. Think of a full join as simply duplicating all the specified information, but in one table, rather than multiple tables. Where matching data is missing, nulls will be produced.
  
  
+ Q10) If RAM size is 4GB, if 4 processes of size 2GB are launched! What happens?
+
+Ans 10)→ Virtual memory (transferring from physical RAM to the hard disk) theoretically allows processes to take as much memory as they want (within the limit of the hard disk obviously).
+
+However, since disk access is many orders of magnitude slower than RAM access, the more of the process can live in RAM the better.
+
+Also, virtual memory only really works well as long as there is a pattern to data access. If things keep having to get written out to disk after every access (because they are not in RAM) then performance is catastrophic.
+
+ 
 
 
 
